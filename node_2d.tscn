@@ -14,7 +14,7 @@ texture = ExtResource("2_0e48y")
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
-size = Vector2(164.57144, 352)
+size = Vector2(173.57144, 352)
 
 [node name="game" type="Node2D" unique_id=113180520]
 
@@ -31,6 +31,6 @@ tile_map_data = PackedByteArray("AADc/wAAAAAAAAAAAADc/wEAAAAAAAEAAADd/wAAAAABAAA
 tile_set = SubResource("TileSet_433ot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=737574142]
-position = Vector2(-7.6293945e-06, 176)
+position = Vector2(15.500027, 176)
 scale = Vector2(7, 1)
 shape = SubResource("RectangleShape2D_0e48y")
