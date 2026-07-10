@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wd5b5v6wbmko" path="res://assets/mmm...feet.png" id="3_acjdt"]
 [ext_resource type="Texture2D" uid="uid://caf6iwt8ojjbt" path="res://assets/moving feet.png" id="4_2mnkm"]
 [ext_resource type="Texture2D" uid="uid://3gda7r18ix7o" path="res://assets/sword.png" id="5_acjdt"]
+[ext_resource type="Texture2D" uid="uid://jxnsiiad0ajy" path="res://assets/moving coat.png" id="6_w7p53"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mnkm"]
 atlas = ExtResource("1_h0d7r")
@@ -161,6 +162,26 @@ region = Rect2(0, 64, 32, 32)
 atlas = ExtResource("2_h0d7r")
 region = Rect2(32, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvwbj"]
+atlas = ExtResource("6_w7p53")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrltr"]
+atlas = ExtResource("6_w7p53")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hty51"]
+atlas = ExtResource("6_w7p53")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj8n6"]
+atlas = ExtResource("6_w7p53")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_655xf"]
+atlas = ExtResource("6_w7p53")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_8m128"]
 animations = [{
 "frames": [{
@@ -190,6 +211,26 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvwbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrltr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hty51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj8n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_655xf")
+}],
+"loop": 1,
+"name": &"moving",
 "speed": 8.0
 }]
 
@@ -249,17 +290,18 @@ shape = SubResource("CircleShape2D_8m128")
 
 [node name="Feat" type="AnimatedSprite2D" parent="." unique_id=2005281621]
 show_behind_parent = true
-position = Vector2(0, 36)
+position = Vector2(-1, 35)
 sprite_frames = SubResource("SpriteFrames_lowbu")
-animation = &"idle"
-frame_progress = 0.3824655
+animation = &"running"
+frame_progress = 0.14999239
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
+animation = &"moving"
 autoplay = "default"
-frame_progress = 0.67926645
+frame_progress = 0.0033633444
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
