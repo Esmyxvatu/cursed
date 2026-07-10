@@ -419,7 +419,7 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_6mnlh")
 animation = &"IDLE"
 autoplay = "IDLE"
-frame_progress = 0.60570896
+frame_progress = 0.6979686
 
 [node name="HeadCollision" type="CollisionShape2D" parent="." unique_id=1187588118]
 visible = false
@@ -433,7 +433,7 @@ scale = Vector2(0.89062494, 1)
 sprite_frames = SubResource("SpriteFrames_lowbu")
 animation = &"falling"
 autoplay = "idle"
-frame_progress = 0.19650291
+frame_progress = 0.28877342
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
@@ -441,7 +441,7 @@ scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.014217172
+frame_progress = 0.7426775
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
@@ -449,7 +449,7 @@ position = Vector2(-1.000001, 29)
 rotation = -2.7922115
 sprite_frames = SubResource("SpriteFrames_ib1u8")
 autoplay = "default"
-frame_progress = 0.41867107
+frame_progress = 0.5109338
 
 [node name="CorpseCollision" type="CollisionShape2D" parent="." unique_id=666939771]
 visible = false
