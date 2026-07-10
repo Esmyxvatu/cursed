@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b8pi41a5mte4" path="res://assets/Group 5 - 5/Group 5 - 5.png" id="1_h0d7r"]
 [ext_resource type="Script" uid="uid://cu7sahb01ybmm" path="res://script/player.gd" id="1_jtblh"]
 [ext_resource type="Texture2D" uid="uid://da85aila4kkcj" path="res://assets/coat.png" id="2_h0d7r"]
-[ext_resource type="Texture2D" uid="uid://wd5b5v6wbmko" path="res://assets/mmm...feet.png" id="3_acjdt"]
 [ext_resource type="Texture2D" uid="uid://caf6iwt8ojjbt" path="res://assets/moving feet.png" id="4_2mnkm"]
 [ext_resource type="Texture2D" uid="uid://3gda7r18ix7o" path="res://assets/sword.png" id="5_acjdt"]
 [ext_resource type="Texture2D" uid="uid://jxnsiiad0ajy" path="res://assets/moving coat.png" id="6_w7p53"]
@@ -84,8 +83,8 @@ atlas = ExtResource("4_2mnkm")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_miwrx"]
-atlas = ExtResource("3_acjdt")
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("4_2mnkm")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jarl3"]
 atlas = ExtResource("4_2mnkm")
@@ -247,15 +246,15 @@ region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hty51"]
 atlas = ExtResource("6_w7p53")
-region = Rect2(0, 32, 32, 32)
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj8n6"]
 atlas = ExtResource("6_w7p53")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_655xf"]
 atlas = ExtResource("6_w7p53")
-region = Rect2(0, 64, 32, 32)
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sj3v3"]
 atlas = ExtResource("6_w7p53")
@@ -419,7 +418,7 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_6mnlh")
 animation = &"IDLE"
 autoplay = "IDLE"
-frame_progress = 0.6979686
+frame_progress = 0.4102874
 
 [node name="HeadCollision" type="CollisionShape2D" parent="." unique_id=1187588118]
 visible = false
@@ -433,15 +432,15 @@ scale = Vector2(0.89062494, 1)
 sprite_frames = SubResource("SpriteFrames_lowbu")
 animation = &"falling"
 autoplay = "idle"
-frame_progress = 0.28877342
+frame_progress = 0.9150446
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
-animation = &"idle"
+animation = &"falling"
 autoplay = "idle"
-frame_progress = 0.7426775
+frame_progress = 0.43797046
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
@@ -449,7 +448,7 @@ position = Vector2(-1.000001, 29)
 rotation = -2.7922115
 sprite_frames = SubResource("SpriteFrames_ib1u8")
 autoplay = "default"
-frame_progress = 0.5109338
+frame_progress = 0.2232531
 
 [node name="CorpseCollision" type="CollisionShape2D" parent="." unique_id=666939771]
 visible = false
