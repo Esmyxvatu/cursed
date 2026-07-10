@@ -61,14 +61,6 @@ func _physics_process(delta: float) -> void:
 		sword.hide()
 		attack.show()
 		attack.play("attack_1")
-	elif Input.is_action_just_pressed("attack_2"):
-		sword.hide()
-		attack.show()
-		attack.play("attack_2")
-	elif Input.is_action_just_pressed("attack_3"):
-		sword.hide()
-		attack.show()
-		attack.play("attack_3")
 
 	if jumping:
 		velocity.y = JUMP_VELOCITY

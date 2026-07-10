@@ -438,54 +438,6 @@ region = Rect2(32, 32, 32, 32)
 atlas = ExtResource("7_w7p53")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e8nwx"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qup6p"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_weyoc"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bena6"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4inbn"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f6otk"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_miwr7"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_87gcg"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fbro6"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7o6eg"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(0, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iuof3"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(32, 128, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rninf"]
-atlas = ExtResource("7_w7p53")
-region = Rect2(64, 128, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_xb5ye"]
 animations = [{
 "frames": [{
@@ -512,52 +464,6 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack_1",
-"speed": 24.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e8nwx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qup6p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_weyoc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bena6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4inbn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f6otk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_miwr7")
-}],
-"loop": 0,
-"name": &"attack_2",
-"speed": 24.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_87gcg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fbro6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7o6eg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iuof3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rninf")
-}],
-"loop": 0,
-"name": &"attack_3",
 "speed": 24.0
 }, {
 "frames": [],
@@ -615,10 +521,8 @@ shape = SubResource("RectangleShape2D_6mnlh")
 position = Vector2(37, 9.5)
 scale = Vector2(1.328125, 1.53125)
 sprite_frames = SubResource("SpriteFrames_xb5ye")
-animation = &"attack_2"
+animation = &"attack_1"
 autoplay = "idle"
-frame = 6
-frame_progress = 1.0
 
 [connection signal="animation_finished" from="Feat" to="." method="_on_feat_animation_finished"]
 [connection signal="animation_finished" from="Coat" to="." method="_on_coat_animation_finished"]
