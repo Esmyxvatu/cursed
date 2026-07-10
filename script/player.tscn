@@ -241,7 +241,7 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_6mnlh")
 animation = &"IDLE"
 autoplay = "IDLE"
-frame_progress = 0.07142391
+frame_progress = 0.017407667
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1187588118]
 visible = false
@@ -252,15 +252,15 @@ shape = SubResource("CircleShape2D_8m128")
 show_behind_parent = true
 position = Vector2(0, 36)
 sprite_frames = SubResource("SpriteFrames_lowbu")
-animation = &"running"
-frame_progress = 0.1541915
+animation = &"idle"
+frame_progress = 0.39400238
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
 autoplay = "default"
-frame_progress = 0.4115204
+frame_progress = 0.20928238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coat" unique_id=666939771]
 visible = false
@@ -273,4 +273,4 @@ position = Vector2(-1, 30)
 rotation = -2.7922115
 sprite_frames = SubResource("SpriteFrames_ib1u8")
 autoplay = "default"
-frame_progress = 0.3707652
+frame_progress = 0.76587987
