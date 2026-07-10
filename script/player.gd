@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 @onready var feet = $Feat
 @onready var coat = $Coat
 @onready var sword = $Sword
+@onready var attack = $attack
 
 var jumping: bool = false
 var max_jump: float = -400
@@ -56,6 +57,19 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED / 4)
 
+	if Input.is_action_just_pressed("attack_1"):
+		sword.hide()
+		attack.show()
+		attack.play("attack_1")
+	elif Input.is_action_just_pressed("attack_2"):
+		sword.hide()
+		attack.show()
+		attack.play("attack_2")
+	elif Input.is_action_just_pressed("attack_3"):
+		sword.hide()
+		attack.show()
+		attack.play("attack_3")
+
 	if jumping:
 		velocity.y = JUMP_VELOCITY
 
@@ -70,6 +84,9 @@ func flip_sprites_around(left: bool) -> void:
 		sword.flip_h = true
 		sword.flip_v = true
 		sword.rotation_degrees = 250
+		
+		attack.flip_h = true
+		attack.offset = Vector2(-55, 0)
 	else:
 		head.flip_h = false
 		coat.flip_h = false
@@ -77,6 +94,9 @@ func flip_sprites_around(left: bool) -> void:
 		sword.flip_h = false
 		sword.flip_v = false
 		sword.rotation_degrees = 200
+		
+		attack.flip_h = false
+		attack.offset = Vector2(0, 0)
 
 
 func _on_coat_animation_finished() -> void:
@@ -87,3 +107,8 @@ func _on_coat_animation_finished() -> void:
 func _on_feat_animation_finished() -> void:
 	if feet.animation == "jump" or feet.animation == "falling":
 		feet.set_animation("idle")
+
+
+func _on_attack_animation_finished() -> void:
+	sword.show()
+	attack.hide()
