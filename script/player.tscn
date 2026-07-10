@@ -193,9 +193,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mnlh"]
-size = Vector2(22.153824, 36.372566)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7rwv"]
 atlas = ExtResource("5_acjdt")
 region = Rect2(0, 0, 32, 32)
@@ -232,6 +229,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mnlh"]
+size = Vector2(22.153824, 36.372566)
+
 [node name="Player" type="CharacterBody2D" unique_id=2134276371]
 position = Vector2(290, 132)
 script = ExtResource("1_jtblh")
@@ -241,10 +241,9 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_6mnlh")
 animation = &"IDLE"
 autoplay = "IDLE"
-frame_progress = 0.017407667
+frame_progress = 0.21975128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1187588118]
-visible = false
 position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_8m128")
 
@@ -253,19 +252,14 @@ show_behind_parent = true
 position = Vector2(0, 36)
 sprite_frames = SubResource("SpriteFrames_lowbu")
 animation = &"idle"
-frame_progress = 0.39400238
+frame_progress = 0.23509811
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
 autoplay = "default"
-frame_progress = 0.20928238
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coat" unique_id=666939771]
-visible = false
-position = Vector2(1.2307739, 3.147049)
-shape = SubResource("RectangleShape2D_6mnlh")
+frame_progress = 0.344262
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
@@ -273,4 +267,9 @@ position = Vector2(-1, 30)
 rotation = -2.7922115
 sprite_frames = SubResource("SpriteFrames_ib1u8")
 autoplay = "default"
-frame_progress = 0.76587987
+frame_progress = 0.96822286
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=666939771]
+position = Vector2(0.6923218, 26.507813)
+scale = Vector2(0.7656245, 0.79687524)
+shape = SubResource("RectangleShape2D_6mnlh")
