@@ -328,7 +328,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"jump",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -553,9 +553,9 @@ frame_progress = 0.9150446
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
-animation = &"falling"
+animation = &"start_falling"
 autoplay = "idle"
-frame_progress = 0.123283245
+frame_progress = 0.0070231445
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
@@ -577,3 +577,5 @@ scale = Vector2(1.328125, 1)
 sprite_frames = SubResource("SpriteFrames_xb5ye")
 animation = &"idle"
 autoplay = "idle"
+
+[connection signal="animation_looped" from="Coat" to="." method="_on_coat_animation_looped"]
