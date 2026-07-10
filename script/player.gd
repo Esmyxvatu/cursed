@@ -18,10 +18,10 @@ func _physics_process(delta: float) -> void:
 	# Show the animation
 	if jumping:
 		coat.play("jump")
-		feet.play("jump")
+		feet.play(feet.animation)
 	elif not is_on_floor() and (coat.animation == "start_falling" or coat.animation == "falling"):
 		coat.play(coat.animation)
-		feet.play("falling")
+		feet.play(feet.animation)
 	elif velocity.x != 0:
 		coat.play("running")
 		feet.play("running")
@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += Vector2(0, 1500) * delta
 
 	# Handle jump.
 	if get_position_delta().y != 0:
@@ -39,11 +39,13 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jumping = true
-		max_jump = last_height - 75.0
+		max_jump = last_height - 575.0
+		feet.play("jump")
 	
 	if jumping and (Input.is_action_just_released("jump") or last_height <= max_jump):
 		jumping = false
 		coat.play("start_falling")
+		feet.play("falling")
 
 	# Get the input direction and handle the movement/deceleration.
 	# should replace UI actions with custom gameplay actions.
@@ -80,3 +82,8 @@ func flip_sprites_around(left: bool) -> void:
 func _on_coat_animation_finished() -> void:
 	if coat.animation == "start_falling":
 		coat.set_animation("falling")
+
+
+func _on_feat_animation_finished() -> void:
+	if feet.animation == "jump" or feet.animation == "falling":
+		feet.set_animation("idle")
