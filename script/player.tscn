@@ -464,7 +464,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack_1",
-"speed": 24.0
+"speed": 32.0
 }, {
 "frames": [],
 "loop": 1,
@@ -518,7 +518,7 @@ scale = Vector2(0.7656245, 0.79687524)
 shape = SubResource("RectangleShape2D_6mnlh")
 
 [node name="attack" type="AnimatedSprite2D" parent="." unique_id=746964958]
-position = Vector2(37, 9.5)
+position = Vector2(38, 9.5)
 scale = Vector2(1.328125, 1.53125)
 sprite_frames = SubResource("SpriteFrames_xb5ye")
 animation = &"attack_1"
