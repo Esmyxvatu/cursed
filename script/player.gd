@@ -152,7 +152,8 @@ func _handle_attack() -> void:
 	if Input.is_action_just_pressed("attack_1") and not attacking:
 		if Input.is_action_pressed("look_up"):
 			_start_attack(attack_up, "attack_1_up")
-		elif Input.is_action_pressed("look_down"):
+		elif Input.is_action_pressed("look_down") and not is_on_floor():
+			# Attaque vers le bas uniquement en l'air (style pogo).
 			_start_attack(attack_down, "attack_1_down")
 		else:
 			_start_attack(attack, "attack_1")
