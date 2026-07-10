@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 		coat.play("jump")
 		feet.play("jump")
 	elif not is_on_floor() and (coat.animation == "start_falling" or coat.animation == "falling"):
-		print(coat.animation, " ", coat.frame, " ", coat.frame_progress)
 		coat.play(coat.animation)
 		feet.play("falling")
 	elif velocity.x != 0:
