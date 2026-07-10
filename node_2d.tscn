@@ -22,6 +22,7 @@ size = Vector2(164.57144, 352)
 position = Vector2(-11, -114)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=532658062]
+zoom = Vector2(1.5, 1.5)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1320543033]
 
