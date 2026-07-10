@@ -366,7 +366,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yvqlh")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"start_falling",
 "speed": 12.0
 }]
@@ -545,9 +545,8 @@ show_behind_parent = true
 position = Vector2(-0.75000024, 35)
 scale = Vector2(0.89062494, 1)
 sprite_frames = SubResource("SpriteFrames_lowbu")
-animation = &"falling"
+animation = &"running"
 autoplay = "idle"
-frame_progress = 0.9150446
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
@@ -555,7 +554,8 @@ scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
 animation = &"start_falling"
 autoplay = "idle"
-frame_progress = 0.0070231445
+frame = 4
+frame_progress = 1.0
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
@@ -578,4 +578,4 @@ sprite_frames = SubResource("SpriteFrames_xb5ye")
 animation = &"idle"
 autoplay = "idle"
 
-[connection signal="animation_looped" from="Coat" to="." method="_on_coat_animation_looped"]
+[connection signal="animation_finished" from="Coat" to="." method="_on_coat_animation_finished"]

@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 		coat.play("jump")
 		feet.play("jump")
 	elif not is_on_floor() and (coat.animation == "start_falling" or coat.animation == "falling"):
+		print(coat.animation, " ", coat.frame, " ", coat.frame_progress)
 		coat.play(coat.animation)
 		feet.play("falling")
 	elif velocity.x != 0:
@@ -41,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		jumping = true
 		max_jump = last_height - 75.0
 	
-	if Input.is_action_just_released("jump") or last_height <= max_jump:
+	if jumping and (Input.is_action_just_released("jump") or last_height <= max_jump):
 		jumping = false
 		coat.play("start_falling")
 
@@ -77,6 +78,6 @@ func flip_sprites_around(left: bool) -> void:
 		sword.rotation_degrees = 200
 
 
-func _on_coat_animation_looped() -> void:
+func _on_coat_animation_finished() -> void:
 	if coat.animation == "start_falling":
-		coat.animation = "falling"
+		coat.set_animation("falling")
