@@ -14,8 +14,10 @@ func _physics_process(delta: float) -> void:
 	# Show the animation
 	if velocity.x != 0:
 		feet.play("running")
+		coat.play("running")
 	else:
 		feet.play("idle")
+		coat.play("idle")
 	
 	# Add the gravity.
 	if not is_on_floor():
