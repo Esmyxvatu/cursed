@@ -39,10 +39,10 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jumping = true
-		max_jump = last_height - 575.0
+		max_jump = last_height - 75.0
 		feet.play("jump")
 	
-	if jumping and (Input.is_action_just_released("jump") or last_height <= max_jump):
+	if jumping and (Input.is_action_just_released("jump") or last_height <= max_jump or is_on_ceiling()):
 		jumping = false
 		coat.play("start_falling")
 		feet.play("falling")
