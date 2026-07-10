@@ -210,7 +210,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_q0ytf")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
 "speed": 8.0
 }, {
 "frames": [{
@@ -230,7 +230,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_655xf")
 }],
 "loop": 1,
-"name": &"moving",
+"name": &"running",
 "speed": 8.0
 }]
 
@@ -292,16 +292,17 @@ shape = SubResource("CircleShape2D_8m128")
 show_behind_parent = true
 position = Vector2(-1, 35)
 sprite_frames = SubResource("SpriteFrames_lowbu")
-animation = &"running"
-frame_progress = 0.0036006789
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.037199277
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
 scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
-animation = &"moving"
-autoplay = "default"
-frame_progress = 0.23920771
+animation = &"running"
+autoplay = "idle"
+frame_progress = 0.6320979
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
