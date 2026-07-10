@@ -293,7 +293,7 @@ show_behind_parent = true
 position = Vector2(-1, 35)
 sprite_frames = SubResource("SpriteFrames_lowbu")
 animation = &"running"
-frame_progress = 0.14999239
+frame_progress = 0.0036006789
 
 [node name="Coat" type="AnimatedSprite2D" parent="." unique_id=160873511]
 position = Vector2(-0.25000784, 24.000004)
@@ -301,7 +301,7 @@ scale = Vector2(0.7656245, 0.79687524)
 sprite_frames = SubResource("SpriteFrames_8m128")
 animation = &"moving"
 autoplay = "default"
-frame_progress = 0.0033633444
+frame_progress = 0.23920771
 
 [node name="Sword" type="AnimatedSprite2D" parent="." unique_id=104374141]
 show_behind_parent = true
