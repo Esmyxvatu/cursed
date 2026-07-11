@@ -164,6 +164,8 @@ func _start_attack(sprite: AnimatedSprite2D, anim: String) -> void:
 	current_attack = sprite
 	sword.hide()
 	sprite.play(anim)
+	if state != State.FALL:
+		coat.play("attack")  # jouee une fois par attaque, sauf en chute
 
 
 func _end_attack() -> void:
@@ -175,19 +177,26 @@ func _end_attack() -> void:
 
 
 func _update_animations() -> void:
+	# Tant que le coat joue "attack", les animations d'etat ne l'ecrasent pas.
+	# (En chute, "attack" n'est jamais lancee, donc le coat reste libre.)
+	var coat_free := coat.animation != "attack" or not attacking
 	match state:
 		State.IDLE:
-			coat.play("idle")
+			if coat_free:
+				coat.play("idle")
 			feet.play("idle")
 		State.RUN:
-			coat.play("running")
+			if coat_free:
+				coat.play("running")
 			feet.play("running")
 		State.JUMP:
-			coat.play("jump")
+			if coat_free:
+				coat.play("jump")
 		State.FALL:
 			if coat.animation != "start_falling" and coat.animation != "falling":
-				coat.play("start_falling")
 				feet.play("falling")
+				if coat_free:
+					coat.play("start_falling")
 
 
 func _flip_sprites(left: bool) -> void:
