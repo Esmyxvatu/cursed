@@ -438,6 +438,10 @@ region = Rect2(32, 32, 32, 32)
 atlas = ExtResource("7_w7p53")
 region = Rect2(64, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbdq7"]
+atlas = ExtResource("2_h0d7r")
+region = Rect2(64, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8nwx"]
 atlas = ExtResource("2_h0d7r")
 region = Rect2(64, 64, 32, 32)
@@ -465,6 +469,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nu4b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbdq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbdq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbdq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbdq7")
 }],
 "loop": 0,
 "name": &"attack_1",
@@ -666,8 +682,10 @@ shape = SubResource("RectangleShape2D_6mnlh")
 position = Vector2(40.6875, 16)
 scale = Vector2(1.5820313, 1.53125)
 sprite_frames = SubResource("SpriteFrames_xb5ye")
-animation = &"idle"
+animation = &"attack_1"
 autoplay = "idle"
+frame = 10
+frame_progress = 1.0
 
 [node name="attack down" type="AnimatedSprite2D" parent="." unique_id=932142996]
 position = Vector2(9.094947e-13, 65.00001)
