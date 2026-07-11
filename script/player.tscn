@@ -663,21 +663,23 @@ scale = Vector2(0.7656245, 0.79687524)
 shape = SubResource("RectangleShape2D_6mnlh")
 
 [node name="attack" type="AnimatedSprite2D" parent="." unique_id=746964958]
-position = Vector2(38, 9.5)
-scale = Vector2(1.328125, 1.53125)
+position = Vector2(40.6875, 16)
+scale = Vector2(1.5820313, 1.53125)
 sprite_frames = SubResource("SpriteFrames_xb5ye")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="attack down" type="AnimatedSprite2D" parent="." unique_id=932142996]
-position = Vector2(7.450581e-09, 57)
+position = Vector2(9.094947e-13, 65.00001)
 rotation = 1.5720605
+scale = Vector2(1.4842867, 1.5225481)
 sprite_frames = SubResource("SpriteFrames_1ftve")
 animation = &"idle"
 
 [node name="attack up" type="AnimatedSprite2D" parent="." unique_id=972677183]
-position = Vector2(0, -27)
+position = Vector2(9.536743e-07, -34)
 rotation = -1.5721847
+scale = Vector2(1.4261229, 1.4882171)
 sprite_frames = SubResource("SpriteFrames_0d5r4")
 animation = &"idle"
 
